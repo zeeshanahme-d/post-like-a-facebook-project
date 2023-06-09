@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Post Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/16ab9b41ef.js" defer crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body onload="removeIcon()">
+    <div class="nav">
+    </div>
+    <div class="container-1">
+        <h1 class="h1">Facebook Post Clone</h1>
+
+        <div class="section-1">
+            <div class="box">
+                <div class="col-1">
+                    <p>Create Post</p>
+                </div>
+                <hr>
+                <hr>
+               
+                <div class="col-2">
+                    <div class="upload">
+                        <img id="upload_image" accept="image/*" src="image/profilepic.jpg" width=80 height=80 alt="">
+                        <div class="col-3">
+                            <div class="content">
+                                <input id="inputName" type="text" placeholder="Enter your Name">
+                            </div>
+                            <div class="select">
+                                <select id="select">
+                                    <option value="Friend">Friends</option>
+                                    <option value="People">Peoples</option>
+                                    <option value="Only Me">Only Me</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="col-4">
+                    <div class="textArea">
+                        <textarea id="textarea" placeholder="What's on your mind,"></textarea>
+                    </div>
+                    <div class="icon">
+                        <i onclick="textTransform()" style="font-style: normal;">Aa</i>
+                        <input type="number" onchange="fun1(this)" id="font-size" value="18" min="1" max="100">
+                        <i onclick="fun2()" class="fa fa-bold"></i>
+                        <i onclick="fun3()" class="fa fa-italic"></i>
+                        <i onclick="fun4()" class="fa fa-underline"></i>
+                        <i onclick="fun5()" class="fa fa-align-left"></i>
+                        <i onclick="fun6()" class="fa fa-align-center"></i>
+                        <i onclick="fun9()" class="fa fa-text-slash"></i>
+                    </div>
+                    <div class="colors">
+                        <div>
+                            <input value="#000000" id="style1" onchange="fun10(this)" type="color">
+                            <br><label style="margin-left: 5px;">TextColor</label>
+                        </div>
+                        <img onclick="backgroundPicture(this)" src="image/bg 1.jpg">
+                        <img onclick="backgroundPicture2(this)" src="image/bg2.webp">
+                        <img onclick="backgroundPicture4(this)" src="image/bg4.jpg">
+                        <img onclick="backgroundPicture5(this)" src="image/bg5.jpg">
+                        <img onclick="backgroundPicture6(this)" src="image/bg6.jpg">
+                        <img onclick="backgroundPicture7(this)" src="image/bg7.webp">
+                        <div>
+                            <input value="#ffffff" id="style2" onchange="fun11(this)" type="color">
+                            <br><label style="margin-left: 5px;">BgColor</label>
+                        </div>
+                    </div>
+                    <div class="icons-box">
+                        <input type="text" value="Add to your post" disabled>
+                        <img src="image/gallery image.png" alt="">
+                        <img src="image/contect image.png" alt="">
+                        <img src="image/iemoji image.png" alt="">
+                        <img src="image/gif image.png" alt="">
+                        <img src="image/location image.png" alt="">
+                        <img src="image/camera image.png" alt="">
+                    </div>
+
+                </div>
+                <div class="btns">
+                    <button type="button" id="postBtn"  onclick="posted()">Post</button>
+                </div>
+                <h5 style="text-align: center;">Made by Zeeshan Ahmed</h5>
+            </div>
+        </div>
+
+        <section class="section-2">
+                <div class="x-icon">
+                    <i id="removeIcon"  onclick="remove()" class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="box-1 display-none">
+                    <div class="col-2">
+                        <div class="upload">
+                            <img id="upload_image" accept="image/*" src="image/profilepic.jpg" width=80 height=80
+                                alt="">
+                            <div class="col-3">
+                                <div class="content name">
+                                    <p id="get-name">Zeeshan</p>
+                                </div>
+                                <div class="select people">
+                                    <i class="fa fa-users"></i>
+                                    <p id="get-sel-val">people</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-4">
+                        <div class="textArea-2">
+                            <textarea value="" class="text-area" id="textarea-1" readonly>zeeshan</textarea>
+                        </div>
+                    </div><br>
+                    <div class="share-content1">
+                        <div class="display-none like">1 Like</div>
+                        <div class="display-none share">1 Share</div>
+                    </div>
+                    <hr><br>
+                    <div class="share-content2">
+                        <i onclick="likeIt()" class="fa fa-heart"><label for="like">Like</label></i>
+                        <i class="fa fa-comment"><label for="comment">Comment</label></i>
+                        <i onclick="shareIt()" class="fa-sharp fa-regular fa-share-from-square S"><label for="share">Share</label></i>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
